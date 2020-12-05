@@ -1,0 +1,59 @@
+PUT https://doughpedia.firebaseio.com/episodes/_{EPISODE_NUMBER}.json
+{
+  "avgScore" : 4.33,
+  "awards" : "none",
+  "date" : "May 25, 2015",
+  "duration" : 4343,
+  "epoch" : 1432555200,
+  "negativeAvgScore" : -4.33,
+  "negativeDuration" : -4343,
+  "negativeEpoch" : -1432555200,
+  "number" : 2,
+  "people" : {
+    "Jack Allison" : true,
+    "Mike Mitchell" : true,
+    "Nick Wiger" : true
+  },
+  "photo" : "https://static.wikia.nocookie.net/doughboys6476/images/8/8c/Ep02.jpg",
+  "ratings" : {
+    "_4" : true,
+    "_5" : true,
+    "_6" : true
+  },
+  "restaurant" : "Taco Bell",
+  "synopsis" : "The Doughboys discuss the cultural significance of Taco Bell as well as review its breakfast menu.",
+  "title" : "Taco Bell with Jack Allison"
+}
+
+
+PUT https://doughpedia.firebaseio.com/ratings/_{RATING_NUMBER}.json
+{
+  "date" : "May 20, 2015",
+  "epoch" : 1432555200,
+  "person" : "Alison Agosti",
+  "restaurant": "IHOP",
+  "score" : 3
+}
+
+
+PUT https://doughpedia.firebaseio.com/people/_{PERSON}/episodes/_{EPISODE_NUMBER}.json
+"true"
+
+PUT https://doughpedia.firebaseio.com/people/_{PERSON}/ratings/_{RATING_NUMBER}.json
+"true"
+
+
+PUT https://doughpedia.firebaseio.com/restaurants/_{RESTAURANT_NAME}.json
+{
+  "episodes" : {
+    "_1" : true
+  },
+  "ratings" : {
+    "_1" : true,
+    "_2" : true,
+    "_3" : true
+  }
+}
+
+
+parse XML for all data -> 
