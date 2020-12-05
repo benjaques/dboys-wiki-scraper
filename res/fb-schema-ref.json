@@ -43,6 +43,18 @@ PUT https://doughpedia.firebaseio.com/people/_{PERSON}/ratings/_{RATING_NUMBER}.
 "true"
 
 
+PUT https://doughpedia.firebaseio.com/people/_{PERSON}.json
+{
+  "episodes" : {
+    "_1" : true
+  },
+  "ratings" : {
+    "_1" : true,
+    "_2" : true,
+    "_3" : true
+  }
+}
+
 PUT https://doughpedia.firebaseio.com/restaurants/_{RESTAURANT_NAME}.json
 {
   "episodes" : {

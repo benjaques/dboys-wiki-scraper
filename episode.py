@@ -14,7 +14,7 @@ class Episode:
         self.negativeEpoch = -self.epoch
         self.negativeAvgScore = -self.avgScore
         self.negativeDuration = -self.duration
-        self.number = number
+        self.number = int(number)
         self.people = dict.fromkeys(fork_ratings, True)
         self.photo = photo
         self.ratings = {}
@@ -39,6 +39,7 @@ class Episode:
     def find_average(self, fork_ratings):
         total = 0
         for key in fork_ratings.values():
+            print(len(fork_ratings))
             total += float(key)
 
         self.avgScore = round(total / len(fork_ratings), 2)
@@ -69,6 +70,8 @@ class Episode:
         return True
 
     def parse_restaurant(self):
-        first_part = self.title.split("with")[0]
+        first_part = self.title.split("with")[0].strip()
+        if first_part[-1].isdigit():
+            first_part = first_part[:-1]
         return ' '.join(first_part.split())
 
